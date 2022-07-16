@@ -28,6 +28,7 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Poppins', sans-serif;
     }
     body {
+        max-width:var(--maxWidth);
         margin: 0;
         padding: 0;
         box-sizing: border-box;
