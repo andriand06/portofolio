@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 import Contact from "../components/Contact";
 import Spinner from "../components/Spinner";
 import Icon from "../components/Icon";
+import { Link } from "react-router-dom";
 const LandingPage = () => {
   const [isLoading, setLoading] = useState(false);
   const [limit, setLimit] = useState(4);
@@ -83,9 +84,9 @@ const LandingPage = () => {
               <a href="#contact" className="link">
                 Contact
               </a>
-              <a href="/cv.pdf" target="_blank" className="button">
+              <Link to="/resume" target="_blank" className="button">
                 Resume
-              </a>
+              </Link>
             </aside>
 
             <Hero />
