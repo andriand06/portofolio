@@ -38,6 +38,16 @@ const LandingPage = () => {
     });
   }, []);
   const onClick = (e) => {
+    const hiddenEl = window.document.getElementById("hidden");
+    const opacity = hiddenEl.style.opacity;
+    if (opacity == 1) {
+      hiddenEl.style.opacity = 0;
+      hiddenEl.style.visibility = "hidden";
+      hiddenEl.style.zIndex = 9;
+      window.document.body.style.overflowY = "visible";
+    }
+  };
+  const closeModal = (e) => {
     e.preventDefault();
     const hiddenEl = window.document.getElementById("hidden");
     const opacity = hiddenEl.style.opacity;
@@ -71,18 +81,18 @@ const LandingPage = () => {
                 name="x"
                 label="x"
                 style={{ width: "36px", height: "36px" }}
-                onClick={onClick}
+                onClick={closeModal}
               ></Icon>
-              <a href="#about" className="link">
+              <a href="#about" className="link" onClick={onClick}>
                 About
               </a>
-              <a href="#experience" className="link">
+              <a href="#experience" className="link" onClick={onClick}>
                 Experience
               </a>
-              <a href="#work" className="link">
+              <a href="#work" className="link" onClick={onClick}>
                 Work
               </a>
-              <a href="#contact" className="link">
+              <a href="#contact" className="link" onClick={onClick}>
                 Contact
               </a>
               <a href="/cv.pdf" download target="_blank" className="button">
