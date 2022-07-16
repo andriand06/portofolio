@@ -11,16 +11,14 @@ const ResumePage = () => {
   const url = {
     url: "https://server-portofolio.herokuapp.com/cv.pdf",
     httpHeaders: {
-      accept: "*/*",
+      Accept: "*/*",
       "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Headers": "*",
-      "Accept-Encoding": "gzip, deflate, br",
     },
     widthCredentials: true,
   };
   return (
     <>
-      <Document file="/cv.pdf" onLoadSuccess={onDocumentLoadSuccess}>
+      <Document file={url} onLoadSuccess={onDocumentLoadSuccess}>
         <Page pageNumber={pageNumber} />
       </Document>
     </>
