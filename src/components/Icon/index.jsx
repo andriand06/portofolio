@@ -1,7 +1,7 @@
 import React from "react";
 import { Wrapper } from "./Icon.styles";
 import PropTypes from "prop-types";
-import feather from "feather-icons/dist/feather-sprite.svg#github";
+import feather from "../../assets/feather-icons/dist/feather-sprite.svg";
 const Icon = ({ href, label, name, style, onClick }) => {
   const target = href == "" ? "_self" : "_blank";
   return (
