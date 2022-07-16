@@ -28,6 +28,7 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Poppins', sans-serif;
     }
     body {
+        overflow-x: hidden;
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -35,7 +36,6 @@ export const GlobalStyle = createGlobalStyle`
         color: var(--slate);
         font-size: var(--fontMed);
         line-height: 1.3;
-        overflow-x: hidden;
         -webkit-font-smoothing: antialiased;
 
     }
