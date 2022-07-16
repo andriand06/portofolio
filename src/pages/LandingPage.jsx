@@ -84,9 +84,9 @@ const LandingPage = () => {
               <a href="#contact" className="link">
                 Contact
               </a>
-              <Link to="/resume" target="_blank" className="button">
+              <a href="/cv.pdf" download target="_blank" className="button">
                 Resume
-              </Link>
+              </a>
             </aside>
 
             <Hero />
