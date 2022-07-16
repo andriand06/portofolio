@@ -13,10 +13,12 @@ const Navbar = () => {
       hiddenEl.style.opacity = 1;
       hiddenEl.style.visibility = "visible";
       hiddenEl.style.zIndex = 11;
+      window.document.body.style.overflowY = "hidden";
     } else {
       hiddenEl.style.opacity = 0;
       hiddenEl.style.visibility = "hidden";
       hiddenEl.style.zIndex = 9;
+      window.document.body.style.overflowY = "visible";
     }
   };
   return (

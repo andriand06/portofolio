@@ -45,6 +45,7 @@ const LandingPage = () => {
       hiddenEl.style.opacity = 0;
       hiddenEl.style.visibility = "hidden";
       hiddenEl.style.zIndex = 9;
+      window.document.body.style.overflowY = "visible";
     }
   };
   const loadMore = (e) => {
