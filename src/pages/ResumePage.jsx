@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
-import cv from "../../public/cv.pdf";
+import cv from "../../cv.pdf";
 const ResumePage = () => {
   const url =
     "https://cors-anywhere.herokuapp.com/http://www.pdf995.com/samples/pdf.pdf";
