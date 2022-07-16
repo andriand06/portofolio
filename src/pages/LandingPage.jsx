@@ -63,7 +63,6 @@ const LandingPage = () => {
         {data.payload.tabs.length > 0 && (
           <>
             <Navbar />
-
             <aside className="hiddenLink" id="hidden">
               <Icon
                 href=""

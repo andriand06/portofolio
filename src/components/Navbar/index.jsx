@@ -37,7 +37,7 @@ const Navbar = () => {
         <a href="#contact" className="link">
           Contact
         </a>
-        <Link to="/cv.pdf" target="_blank" className="button">
+        <Link to="/resume" target="_blank" className="button">
           Resume
         </Link>
       </div>
