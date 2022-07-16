@@ -9,7 +9,7 @@ function App() {
     <Router>
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
-        <Route exact path="/resume" element={<ResumePage />} />
+        <Route path="/resume" element={<ResumePage />} />
       </Routes>
       <GlobalStyle />
     </Router>
