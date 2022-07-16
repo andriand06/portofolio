@@ -10,6 +10,7 @@ const theme = extendTheme({
       body: {
         bg: "#0a192f",
         color: "#8892b0",
+        overflowX: "hidden",
       },
     },
   },
