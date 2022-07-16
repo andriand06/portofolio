@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
-import cv from "../../public/cv.pdf";
 const ResumePage = () => {
   const url =
     "https://cors-anywhere.herokuapp.com/http://www.pdf995.com/samples/pdf.pdf";
@@ -13,7 +12,10 @@ const ResumePage = () => {
   };
   return (
     <>
-      <Document file={cv} onLoadSuccess={onDocumentLoadSuccess}>
+      <Document
+        file={`https://server-portofolio.herokuapp.com/cv.pdf`}
+        onLoadSuccess={onDocumentLoadSuccess}
+      >
         <Page pageNumber={pageNumber} />
       </Document>
     </>
