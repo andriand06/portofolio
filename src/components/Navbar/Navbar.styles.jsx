@@ -20,6 +20,7 @@ export const Wrapper = styled.nav`
     flex-direction: row;
     @media screen and (max-width: 767px) {
       opacity: 0;
+      visibility: hidden;
       position: absolute;
     }
   }
