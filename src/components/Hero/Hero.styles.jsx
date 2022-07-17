@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
       font-size: var(--fontSuperBig);
     }
   }
-  .title {
+  .heroTitle {
     margin: 0;
     font-size: var(--fontBig);
     font-weight: bold;

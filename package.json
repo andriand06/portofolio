@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.9.3",
     "feather-icons": "^4.29.0",
     "framer-motion": "^6.4.3",
+    "gsap": "^3.10.4",
     "prop-types": "^15.8.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",

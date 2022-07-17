@@ -1,10 +1,30 @@
-import React from "react";
+import React, { useRef, useLayoutEffect } from "react";
 import { Link } from "react-router-dom";
 import { Wrapper } from "./Navbar.styles";
 import Logo from "../../assets/images/andrian1.jpg";
 import Icon from "../Icon";
-
+import gsap from "gsap";
 const Navbar = () => {
+  const el = useRef();
+  const q = gsap.utils.selector(el);
+  const tl = useRef();
+  const navAnimation = () => {
+    gsap.fromTo(
+      q([".logo", ".link", ".button", ".hamBox"]),
+      { opacity: 0, y: -100 },
+      {
+        duration: 1,
+        opacity: 1,
+        y: 0,
+        stagger: 0.2,
+        ease: "back",
+      }
+    );
+  };
+  useLayoutEffect(() => {
+    tl.current = gsap.timeline();
+    tl.current.add(navAnimation());
+  }, []);
   const onClick = (e) => {
     e.preventDefault();
     const hiddenEl = window.document.getElementById("hidden");
@@ -22,7 +42,7 @@ const Navbar = () => {
     }
   };
   return (
-    <Wrapper>
+    <Wrapper ref={el}>
       <Link to="" className="logo">
         <img src={Logo} style={{ width: "50px", height: "40px" }}></img>
       </Link>

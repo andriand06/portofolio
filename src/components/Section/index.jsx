@@ -1,11 +1,45 @@
-import React from "react";
+import React, { useRef, useLayoutEffect } from "react";
 import { Wrapper } from "./Section.styles";
 import PropTypes from "prop-types";
 import myPic from "../../assets/images/new.jpg";
 import Icon from "../Icon";
+import gsap from "gsap";
 const Section = ({ className, id, title, no, data, limit }) => {
+  const el = useRef();
+  const q = gsap.utils.selector(el);
+  const tl = useRef();
+  useLayoutEffect(() => {
+    gsap.fromTo(
+      q([
+        "#about > .title",
+        "#about > .about > .detail",
+        ".skillList",
+        "#about > .about > .imageWrapper",
+      ]),
+      { opacity: 0, y: 100 },
+      { duration: 1, opacity: 1, y: 0, stagger: 0.2, ease: "bounce" }
+    );
+  }, []);
+  tl.current = gsap.timeline({ paused: true });
+  tl.current.fromTo(
+    q([
+      "#work > .title",
+      "#work > .work > .imageWrapper",
+      "#work > .work > .projectDetail",
+    ]),
+    { opacity: 0, y: 100 },
+    { duration: 1, opacity: 1, y: 0, stagger: 0.2, ease: "bounce" }
+  );
+  const sectionAnimation = () => {
+    if (window.scrollY > 1200) {
+      tl.current.play();
+      document.removeEventListener("scroll", sectionAnimation);
+    }
+  };
+  document.addEventListener("scroll", sectionAnimation);
+
   return (
-    <Wrapper id={id}>
+    <Wrapper id={id} ref={el}>
       <h2 className="title">
         <span className="greenText" style={{ marginRight: "1rem" }}>
           {no}
@@ -84,7 +118,6 @@ const Section = ({ className, id, title, no, data, limit }) => {
     </Wrapper>
   );
 };
-
 Section.propTypes = {
   className: PropTypes.string,
 };

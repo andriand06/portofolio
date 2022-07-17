@@ -99,7 +99,6 @@ const LandingPage = () => {
                 Resume
               </a>
             </aside>
-
             <Hero />
             <Section
               id="about"
