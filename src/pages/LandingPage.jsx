@@ -36,7 +36,7 @@ const LandingPage = () => {
       setLoading(false);
     });
   }, []);
-  const onClick = (e) => {
+  const onClick = (_e) => {
     const hiddenEl = window.document.getElementById("hidden");
     const opacity = hiddenEl.style.opacity;
     if (opacity == 1) {

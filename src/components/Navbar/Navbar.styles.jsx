@@ -18,7 +18,7 @@ export const Wrapper = styled.nav`
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       opacity: 0;
       position: absolute;
     }
@@ -26,7 +26,7 @@ export const Wrapper = styled.nav`
   .hamBox {
     opacity: 0;
     position: absolute;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       opacity: 1;
       position: relative;
     }
