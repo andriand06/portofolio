@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
+  max-width: var(--maxWidth);
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 100vh;
   .spinner {
     margin: 0 auto;

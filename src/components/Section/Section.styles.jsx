@@ -64,11 +64,14 @@ export const Wrapper = styled.div`
           list-style: none;
           display: grid;
           place-items: center;
-          grid-template-columns: repeat(4, minmax(40px, 150px));
+          grid-template-columns: repeat(2, minmax(10px, 150px));
           gap: 10px 10px;
           font-size: var(--fontSmall);
           li {
             margin: 0 0.5rem;
+          }
+          @media screen and (min-width: 768px) {
+            grid-template-columns: repeat(4, minmax(20px, 250px));
           }
           @media screen and (min-width: 1028px) {
             grid-template-columns: repeat(6, minmax(20px, 250px));

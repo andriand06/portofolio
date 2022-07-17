@@ -49,7 +49,7 @@ const Section = ({ className, id, title, no, data, limit }) => {
         </div>
       )}
       {id === "work" &&
-        data.project.slice(0,limit).map((work, index) => (
+        data.project.slice(0, limit).map((work, index) => (
           <div className={className} key={index}>
             <div className="imageWrapper">
               <img

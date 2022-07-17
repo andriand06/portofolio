@@ -8,7 +8,6 @@ import Footer from "../components/Footer";
 import Contact from "../components/Contact";
 import Spinner from "../components/Spinner";
 import Icon from "../components/Icon";
-import { Link } from "react-router-dom";
 const LandingPage = () => {
   const [isLoading, setLoading] = useState(false);
   const [limit, setLimit] = useState(4);
@@ -73,7 +72,8 @@ const LandingPage = () => {
     content = (
       <>
         {data.payload.tabs.length > 0 && (
-          <>
+          //wrapped in div with below style to hide x overflow and need to set position to relative because overflowx in body tag will be ignored in mobile
+          <div style={{ overflowX: "hidden", position: "relative" }}>
             <Navbar />
             <aside className="hiddenLink" id="hidden">
               <Icon
@@ -135,7 +135,7 @@ const LandingPage = () => {
             <Contact />
             <Sidebar />
             <Footer />
-          </>
+          </div>
         )}
       </>
     );

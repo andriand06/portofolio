@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
   bottom: 0px;
   z-index: 10;
   color: var(--lightSlate);
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 767px) {
     position: fixed;
     margin: 0 0 0 40px;
     justify-content: left;
@@ -25,7 +25,7 @@ export const Wrapper = styled.div`
     -webkit-box-align: center;
     margin: 0;
     list-style: none;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       width: 35%;
       flex-direction: row;
     }
