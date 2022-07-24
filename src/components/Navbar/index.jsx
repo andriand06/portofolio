@@ -9,17 +9,31 @@ const Navbar = () => {
   const q = gsap.utils.selector(el);
   const tl = useRef();
   const navAnimation = () => {
-    gsap.fromTo(
-      q([".logo", ".link", ".button", ".hamBox"]),
-      { opacity: 0, y: -100 },
-      {
-        duration: 1,
-        opacity: 1,
-        y: 0,
-        stagger: 0.2,
-        ease: "back",
-      }
-    );
+    if (window.innerWidth <= 768) {
+      gsap.fromTo(
+        q([".logo", ".hamBox"]),
+        { opacity: 0, y: -100 },
+        {
+          duration: 1,
+          opacity: 1,
+          y: 0,
+          stagger: 0.2,
+          ease: "back",
+        }
+      );
+    } else {
+      gsap.fromTo(
+        q([".logo", ".link", ".button"]),
+        { opacity: 0, y: -100 },
+        {
+          duration: 1,
+          opacity: 1,
+          y: 0,
+          stagger: 0.2,
+          ease: "back",
+        }
+      );
+    }
   };
   useLayoutEffect(() => {
     tl.current = gsap.timeline();
