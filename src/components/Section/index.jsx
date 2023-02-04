@@ -70,12 +70,18 @@ const Section = ({ className, id, title, no, data, limit }) => {
                 return <p key={index}>{e.description}</p>;
               }
             })}
-            <p>{data.techList.description}</p>
-            <ul className="skillList">
-              {data.techList.listId.map((list, index) => (
-                <li key={index}>{list.name}</li>
-              ))}
-            </ul>
+            {data.techList.map((e, index) => {
+              return (
+                <div key={index}>
+                  <p>{e.description}</p>
+                  <ul className="skillList">
+                    {e.listId.map((list, index) => (
+                      <li key={index}>{list.name}</li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
           </div>
           <div className="imageWrapper">
             <img src={myPic} alt="" className="profilePic" />
