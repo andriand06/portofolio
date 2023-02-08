@@ -2,6 +2,7 @@ import React, { useRef, useLayoutEffect } from "react";
 import { Wrapper } from "./Sidebar.styles";
 import Icon from "../Icon";
 import gsap from "gsap";
+import { Link } from "react-router-dom";
 const Sidebar = () => {
   const el = useRef();
   const q = gsap.utils.selector(el);
@@ -48,6 +49,13 @@ const Sidebar = () => {
             href="mailto:andriandavinta@gmail.com"
             label="Mail"
             name="mail"
+          />
+        </li>
+        <li>
+          <Icon
+            href="https://www.upwork.com/freelancers/~01852a78b1232dd2b1?viewMode=1"
+            label="Upwork"
+            name="arrow-up-circle"
           />
         </li>
       </ul>

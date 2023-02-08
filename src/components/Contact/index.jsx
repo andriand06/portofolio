@@ -25,10 +25,9 @@ const Contact = () => {
         04. What's next?
       </p>
       <h2 className="title">Get In Touch</h2>
-      <p>
-        Get to know each other, freely contact me or connect with me through
-        LinkedIn
-      </p>
+      <p>1. Get to know each other</p>
+      <p>2. Freelance / Job Opportunities</p>
+      <p>Freely contact me or connect me through LinkedIn.</p>
       <a
         href="mailto:andriandavinta@gmail.com"
         className="button"
