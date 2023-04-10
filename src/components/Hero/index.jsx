@@ -1,7 +1,7 @@
 import React, { useRef, useLayoutEffect } from "react";
 import { Wrapper } from "./Hero.styles";
 import gsap from "gsap";
-const Hero = () => {
+const Hero = ({ jobTitle, description, companyName, companyLink }) => {
   const el = useRef();
   const q = gsap.utils.selector(el);
   useLayoutEffect(() => {
@@ -17,19 +17,12 @@ const Hero = () => {
       <h1 className="heroTitle">
         <span className="myName">Andrian Davinta.</span>
         <br />
-        I'm a Software Developer.
+        {` I'm a ${jobTitle}.`}
       </h1>
       <p className="description">
-        <span>
-          I build things for the web specializing in Mern Stack. Currently, I'm
-          focused on customizing ERP Software at {""}
-        </span>
-        <a
-          href="https://itgroupinc.asia/"
-          target="_blank"
-          className="animatedLink"
-        >
-          IT Group.
+        <span>{description} at </span>
+        <a href={companyLink} target="_blank" className="animatedLink">
+          {companyName}
         </a>
       </p>
     </Wrapper>

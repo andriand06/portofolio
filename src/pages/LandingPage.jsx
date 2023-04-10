@@ -12,11 +12,15 @@ const LandingPage = () => {
   const [isLoading, setLoading] = useState(false);
   const [limit, setLimit] = useState(4);
   const [data, setData] = useState({
-    payload: { about: {}, work: [], tabs: [] },
+    payload: { hero: {}, about: {}, work: [], tabs: [] },
   });
   useEffect(() => {
     setLoading(true);
     const fetchData = async () => {
+      const heroRes = await fetch(
+        "https://server-portofolio.herokuapp.com/api/v1/hero"
+      );
+      const hero = await heroRes.json();
       const aboutRes = await fetch(
         "https://server-portofolio.herokuapp.com/api/v1/about"
       );
@@ -30,7 +34,7 @@ const LandingPage = () => {
         "https://server-portofolio.herokuapp.com/api/v1/experience"
       );
       const tabs = await tabsRes.json();
-      setData({ payload: { about, work, tabs } });
+      setData({ payload: { hero, about, work, tabs } });
     };
     fetchData().then((_res) => {
       setLoading(false);
@@ -99,7 +103,12 @@ const LandingPage = () => {
                 Resume
               </a>
             </aside>
-            <Hero />
+            <Hero
+              jobTitle={data.payload.hero[0].jobTitle}
+              companyLink={data.payload.hero[0].companyLink}
+              companyName={data.payload.hero[0].companyName}
+              description={data.payload.hero[0].description}
+            />
             <Section
               id="about"
               className="about"
