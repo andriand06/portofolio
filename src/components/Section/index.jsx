@@ -92,10 +92,7 @@ const Section = ({ className, id, title, no, data, limit }) => {
         data.project.slice(0, limit).map((work, index) => (
           <div className={className} key={index}>
             <div className="imageWrapper">
-              <img
-                src={`https://server-portofolio.herokuapp.com/${work.imageUrl}`}
-                alt="myProject1"
-              />
+              <img src={`/${work.imageUrl}`} alt="myProject1" />
             </div>
             <div className="projectDetail">
               <h5 className="greenText" style={{ fontSize: "14px" }}>

@@ -8,38 +8,60 @@ import Footer from "../components/Footer";
 import Contact from "../components/Contact";
 import Spinner from "../components/Spinner";
 import Icon from "../components/Icon";
+import { tabs } from "../assets/datas/tabs";
+import { hero } from "../assets/datas/heros";
+import { about } from "../assets/datas/abouts";
+import { work } from "../assets/datas/projects";
 const LandingPage = () => {
   const [isLoading, setLoading] = useState(false);
   const [limit, setLimit] = useState(4);
   const [data, setData] = useState({
     payload: { hero: {}, about: {}, work: [], tabs: [] },
   });
+
   useEffect(() => {
     setLoading(true);
-    const fetchData = async () => {
-      const heroRes = await fetch(
-        "https://server-portofolio.herokuapp.com/api/v1/hero"
-      );
-      const hero = await heroRes.json();
-      const aboutRes = await fetch(
-        "https://server-portofolio.herokuapp.com/api/v1/about"
-      );
-      const about = await aboutRes.json();
-      const workRes = await fetch(
-        "https://server-portofolio.herokuapp.com/api/v1/work"
-      );
 
-      const work = await workRes.json();
-      const tabsRes = await fetch(
-        "https://server-portofolio.herokuapp.com/api/v1/experience"
-      );
-      const tabs = await tabsRes.json();
-      setData({ payload: { hero, about, work, tabs } });
-    };
-    fetchData().then((_res) => {
-      setLoading(false);
+    setData({
+      payload: {
+        hero,
+        about,
+        work,
+        tabs,
+      },
     });
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
   }, []);
+
+  //comment since backend are in local then our payloads are kept in json
+  // useEffect(() => {
+  //   setLoading(true);
+  //   const fetchData = async () => {
+  //     const heroRes = await fetch(
+  //       "https://server-portofolio.herokuapp.com/api/v1/hero"
+  //     );
+  //     const hero = await heroRes.json();
+  //     const aboutRes = await fetch(
+  //       "https://server-portofolio.herokuapp.com/api/v1/about"
+  //     );
+  //     const about = await aboutRes.json();
+  //     const workRes = await fetch(
+  //       "https://server-portofolio.herokuapp.com/api/v1/work"
+  //     );
+
+  //     const work = await workRes.json();
+  //     const tabsRes = await fetch(
+  //       "https://server-portofolio.herokuapp.com/api/v1/experience"
+  //     );
+  //     const tabs = await tabsRes.json();
+  //     setData({ payload: { hero, about, work, tabs } });
+  //   };
+  //   fetchData().then((_res) => {
+  //     setLoading(false);
+  //   });
+  // }, []);
   const onClick = (_e) => {
     const hiddenEl = window.document.getElementById("hidden");
     const opacity = hiddenEl.style.opacity;

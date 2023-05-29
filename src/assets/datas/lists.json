@@ -1,0 +1,82 @@
+[{
+  "_id": {
+    "$oid": "62d0fafc14c1e3beecca74a3"
+  },
+  "name": "JavaScript",
+  "techId": {
+    "$oid": "62d0fad714c1e3beecca7491"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d0fb2414c1e3beecca74b8"
+  },
+  "name": "Node.js",
+  "techId": {
+    "$oid": "62d0fad714c1e3beecca7491"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d0fb0c14c1e3beecca74aa"
+  },
+  "name": "React",
+  "techId": {
+    "$oid": "62d0fad714c1e3beecca7491"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63ddcdffd2789c1d7ab6349d"
+  },
+  "name": "Docker",
+  "techId": {
+    "$oid": "63ddcdedd2789c1d7ab63496"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63ddce09d2789c1d7ab634a4"
+  },
+  "name": "Kubernetes",
+  "techId": {
+    "$oid": "63ddcdedd2789c1d7ab63496"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63ddce3ad2789c1d7ab634ab"
+  },
+  "name": "Elastic",
+  "techId": {
+    "$oid": "63ddcdedd2789c1d7ab63496"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63ddce5dd2789c1d7ab634b2"
+  },
+  "name": "OpenShift",
+  "techId": {
+    "$oid": "63ddcdedd2789c1d7ab63496"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63de604affdbe207e6734254"
+  },
+  "name": "Redux",
+  "techId": {
+    "$oid": "62d0fad714c1e3beecca7491"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63de605dffdbe207e6734263"
+  },
+  "name": "Vue",
+  "techId": {
+    "$oid": "62d0fad714c1e3beecca7491"
+  },
+  "__v": 0
+}]

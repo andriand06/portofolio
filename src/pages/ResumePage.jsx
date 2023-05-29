@@ -9,7 +9,7 @@ const ResumePage = () => {
     setNumPages(numPages);
   };
   const url = {
-    url: "https://server-portofolio.herokuapp.com/cv.pdf",
+    url: "cv.pdf",
     httpHeaders: {
       Accept: "*/*",
       "Access-Control-Allow-Origin": "*",

@@ -1,0 +1,73 @@
+[{
+  "_id": {
+    "$oid": "62d11f2d980816f3df9e47cf"
+  },
+  "description": "Ensure business and functional requirements are properly executed",
+  "tabId": {
+    "$oid": "62cfc9b39fb449210d1bda81"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d11f06980816f3df9e47bd"
+  },
+  "description": "Develop, test and deploy improvements to ERP System based on industry standard and business needs",
+  "tabId": {
+    "$oid": "62cfc9b39fb449210d1bda81"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d11f40980816f3df9e47e1"
+  },
+  "description": "Data Migration",
+  "tabId": {
+    "$oid": "62cfc9b39fb449210d1bda81"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d11f37980816f3df9e47d8"
+  },
+  "description": "Troubleshooting",
+  "tabId": {
+    "$oid": "62cfc9b39fb449210d1bda81"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d11f1a980816f3df9e47c6"
+  },
+  "description": "Configuring System to meet business requirements",
+  "tabId": {
+    "$oid": "62cfc9b39fb449210d1bda81"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63ddcedad2789c1d7ab634c4"
+  },
+  "description": "Setup and Config API Gateway",
+  "tabId": {
+    "$oid": "62cfc9b39fb449210d1bda81"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63ddceedd2789c1d7ab634cb"
+  },
+  "description": "Manage API Gateway",
+  "tabId": {
+    "$oid": "62cfc9b39fb449210d1bda81"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63ddcf08d2789c1d7ab634d2"
+  },
+  "description": "Scipting & Automation",
+  "tabId": {
+    "$oid": "62cfc9b39fb449210d1bda81"
+  },
+  "__v": 0
+}]

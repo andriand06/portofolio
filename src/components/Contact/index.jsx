@@ -12,7 +12,6 @@ const Contact = () => {
     { duration: 1, opacity: 1, y: 0, stagger: 0.2, ease: "bounce" }
   );
   const scrollAnimation = () => {
-    console.log(window.scrollY);
     if (window.scrollY > 1400) {
       tl.current.play();
       document.removeEventListener("scroll", scrollAnimation);
